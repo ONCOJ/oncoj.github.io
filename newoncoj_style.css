@@ -1,0 +1,81 @@
+<!-- #headline1 {     background:linear-gradient(#FF9900, #FFA500);     border-radius: 3px;     padding-left: 20px;     padding-top: 1px;     padding-bottom: 1px;  } -->
+
+ #modeofwriting {
+    background-image: url('fadeout-aonegamine.png');
+    background-size: cover;
+    height: 500px;
+    width: 800px;
+}
+ #headline1 {
+    background-image: url('fadeout-mountains.png');
+    background-size: cover;
+    height: 170px;
+}
+ #footer {
+    background-image: url('fadeout-mountains.png');
+    background-size: cover;
+    height: 170px;
+}
+ #tatenukinasini {
+    border: 5px solid #555; 
+}
+  a.class1:link, a.class1:visited {
+     background-color: #DC143C;
+     outline: 2px solid #8B4513;
+     color: white;
+     padding: 15px 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 175%;
+  }
+  a.class1:hover, a.class1:active {
+     background-color: #FF6347;
+  }
+body {
+  padding-left: 17%;
+  padding-right: 4%;
+  padding-bottom: 1em;
+}
+ ul.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0.2em;
+    left: 0.2em;
+    width: 16%; 
+    word-break: break-word;
+}
+ul.navbar li.active {
+  border-right: 1em solid black;
+}
+ul.navbar li {
+  background: #FFA500;
+  opacity: 0.9;
+  margin: 0.1em 0;
+  padding: 0.2em;
+  border-right: 1em solid gray;
+  height: 110%;
+  line-height: 110%;
+  font-size: 15px;
+}
+ul.navbar a {
+  text-decoration: none }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+table {
+  width: 100%;
+}
+
+th {
+  height: 30px;
+}
+

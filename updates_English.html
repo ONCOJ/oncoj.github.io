@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Oxford NINJAL Corpus of Old Japanese (ONCOJ)</title>
+  <link rel="stylesheet" href="newoncoj_style.css">
+</head>
+<body>
+
+<div id="headline1">
+<p>&nbsp;</p>
+<h1>Oxford NINJAL Corpus of Old Japanese (ONCOJ)</h1>
+</div>
+
+<ul class="navbar">
+<li><a href="index.html">Front page</a><br><a href="front_page_Japanese.html">フロント・ページ</a>
+<li><a href="editorial_board_English.html">Editorial board</a><br><a href="editorial_board_Japanese.html">編集委員会</a>
+<li><a href="about_the_project_English.html">About the project</a><br><a href="about_the_project_Japanese.html">プロジェクトについて</a>
+<li><a href="texts_English.html">The texts</a><br><a href="texts_Japanese.html">OJ テキスト</a>
+<li><a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj_dictionary.sh?search=.&part=s&mode=typeset" target="_blank">Dictionary<br>辞書</a>
+<li><a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj.sh" target="_blank">Search interface<br>検索インターフェース</a>
+<li><a href="search_interface_English.html">About the search interface</a><br><a href="search_interface_Japanese.html">検索インターフェースについて</a>
+<li><a href="https://github.com/ONCOJ/data/releases/tag/release" target="_blank">Download</a><br><a href="https://github.com/ONCOJ/data/releases/tag/release" target="_blank">ダウンロード</a>
+<li><a href="prospects_English.html">Prospects and plans</a><br><a href="prospects_Japanese.html">今後の研究計画及び抱負</a>
+<li class="active">Updates<br><a href="updates_Japanese.html">アップデート</a>
+<li><a href="acknowledgements_English.html">Acknowledgements of support</a><br><a href="acknowledgements_Japanese.html">研究支援について</a>
+<li><a href="contact_English.html">Report errors, contact</a><br><a href="contact_Japanese.html">エラーの報告連絡先及びその他の連絡先</a> 
+<li><a href="https://oncoj.orinst.ox.ac.uk/">Parsed Corpora Portal<br>コーパス・ポータルサイト</a>
+</ul>
+
+<h1>Updates</h1>
+As of March 2022, all data accessible from the online Search Interface is derived directly from the source data as it is updated in real time.
+Updates for webpages, new functionalities, etc. will be described here as they are published. </p>
+
+<p>Until March 2022, the data for this corpus was presented in periodic updates.
+The <strong>first update</strong> took place on <strong>21 September 2018</strong>, replacing Version 2018.3. In addition to significant improvements in lemmatization and correction of mistakes in text, analysis or tagging, the main systematic changes introduced in Version2018.9 are: </p>
+
+<p style="padding-left: 30px;">- The format of lemma ID numbers has been uniformized, as "l0xxxxx". </p>
+
+<p style="padding-left: 30px;">- A phrase tag has been created for nominalized clauses: "IP-NMZ". These are nominal phrases and often their role is further specified as "SBJ" = subject, "OB1" = object, "PRD" = nominal predicate, etc. Nominalized clauses generally have a predicate in the adnominal ("ADN" or "ADC") or nominal ("NML") form.</p>
+
+<p style="padding-left: 30px;">- Part-of-speech tags have been introduced for pro-forms ("PRO-N" = pronoun, "PRO-ADV" = pro-adverb) and <em>wh</em>-forms ("WH-N" = interrogative pronoun, "WH-ADJ-STM" = interrogative adjective, "WH-ADV" = interrogative adverb, "WH-NUM" = interrogative numeral) .</p>
+
+<p style="padding-left: 30px;">- Information about makura-kotoba, place names, personal names has been moved from lemma IDs to part-of-speech tags ("MK" = makura-kotoba, "PLN" = place name, "PEN" = personal name)</p>
+
+<p style="padding-left: 30px;">- The structure of makura-kotoba has been uniformized, such that (a) each makura-kotoba is treated as one word, with part-of-speech and lemma information about constituent parts included where known, but without internal structure, and (b) makura-kotoba syntactically are tagged as "IP-EPT" = epithetical IP, a modifying constituent, but without specifying the modificational relation.</p>
+
+<p style="padding-left: 30px;">- Inflectional information has for complex inflected forms (e.g., verbal syntagms) been duplicated at the highest word level, so that it no longer is necessary to look inside a complex inflected word to find its inflection type, e.g. <em>siranu</em> [VB-ADN [VB-STM sira] [VAX-NEG-ADN nu] ].</p>
+
+<p style="padding-left: 30px;">- Adjectives are now uniformly marked as "ADJ-STM" = adjective stem at the lowest level, regardless of the kind of adjective. These can, rarely, form a "ADJ" on their own, but are usually either compounded with nouns, e.g. <em>opokimi</em> [N [ADJ-STM opo] [N kimi] ], or followed by "ACP" = adjectival copula or "COP" = copula to form an "ADJ" = inflected adjective form, e.g. <em>takaki</em> [ADJ-ADN [ADJ-STM taka] [ACP-ADN ki] ], which here also specifies that the adjectival copula and therefore the entire form is in the "ADN' = adnominal form.</p>
+
+<p style="padding-left: 30px;">- The structures in which numerals occur have been simplified such that numerals combine with either an "N" = noun or "CL" = classifier, and always will take part in forming an "N" = noun, e.g. <em>pitoywo</em> [N [NUM pito] [N ywo] ]. Thus, "NUMCLP" = numeral classifier phrases have been eliminated.</p>
+
+<p style="padding-left: 30px;">- Use of the part-of-speech "WORD" has been reduced significantly, and it is now only used in a few cases where part of speech is completely unknown.</p>
+
+<p style="padding-left: 30px;">- A number of superfluous and/or very inconsistently implemented semantic roles have been eliminated.</p>
+
+<p>The <strong>fourth</strong> update was released <strong>7 March 2021</strong>, and includes the results of the first round of hand-checked lemmatization, among other improvements. </p>
+
+<p>The <strong>fifth</strong> update was released <strong>October 14 2021</strong>, updating the <strong>List of words</strong> to reflect the state of the corpus data at that point. 
+The domain was changed and the functionalities of the Search Interface were increased. 
+From this date, the data accessible through the online interface is being taken directly from the source data for the corpus as it is updated in real time. </p>
+
+<p>In <strong>January 2023</strong>, with the publication of a fully operational 
+<a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj_dictionary.sh?search=.&part=s&mode=typeset" target="_blank">Dictionary</a> function within the Search Interface, the <strong>List of words</strong>  page was removed from the present site.</p>
+
+</body>
+</html>
+

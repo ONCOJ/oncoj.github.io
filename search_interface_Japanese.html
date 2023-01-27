@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Oxford NINJAL Corpus of Old Japanese (ONCOJ)</title>
+  <link rel="stylesheet" href="newoncoj_style.css">
+</head>
+<body>
+
+<div id="headline1">
+<p>&nbsp;</p>
+<h1>Oxford NINJAL Corpus of Old Japanese (ONCOJ)</h1>
+</div>
+
+<ul class="navbar">
+<li><a href="index.html">Front page</a><br><a href="front_page_Japanese.html">フロント・ページ</a>
+<li><a href="editorial_board_English.html">Editorial board</a><br><a href="editorial_board_Japanese.html">編集委員会</a>
+<li><a href="about_the_project_English.html">About the project</a><br><a href="about_the_project_Japanese.html">プロジェクトについて</a>
+<li><a href="texts_English.html">The texts</a><br><a href="texts_Japanese.html">OJ テキスト</a>
+<li><a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj_dictionary.sh?search=.&part=s&mode=typeset" target="_blank">Dictionary<br>辞書</a>
+<li><a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj.sh" target="_blank">Search interface<br>検索インターフェース</a>
+<li class="active"><a href="search_interface_English.html">About the search interface</a><br>検索インターフェースについて
+<li><a href="https://github.com/ONCOJ/data/releases/tag/release" target="_blank">Download</a><br><a href="https://github.com/ONCOJ/data/releases/tag/release" target="_blank">ダウンロード</a>
+<li><a href="prospects_English.html">Prospects and plans</a><br><a href="prospects_Japanese.html">今後の研究計画及び抱負</a>
+<li><a href="updates_English.html">Updates</a><br><a href="updates_Japanese.html">アップデート</a>
+<li><a href="acknowledgements_English.html">Acknowledgements of support</a><br><a href="acknowledgements_Japanese.html">研究支援について</a>
+<li><a href="contact_English.html">Report errors, contact</a><br><a href="contact_Japanese.html">エラーの報告連絡先及びその他の連絡先</a> 
+<li><a href="https://oncoj.orinst.ox.ac.uk/">Parsed Corpora Portal<br>コーパス・ポータルサイト</a>
+</ul>
+
+<h1>検索インタフェースについて</h1>
+
+<h2><a name="sec1">1</a>&nbsp;&nbsp;&nbsp;はじめに</h2>
+
+<p>2021年末に新しいコーパス検索インタフェースが公開され、現在それが本コーパスにオンラインでアクセスするためのツールになっている。そのインタフェースには <strong><a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj.sh" target="_blank">ここ</a></strong>からアクセスできる。
+
+ONCOJ 検索インタフェースは以下のことに役立つ：</p>
+
+<dl>
+<dt>(i)</dt><dd>コーパス全体のブラウザーとしての利用（テキストのID番号を検索表現として使い、内容にアクセスすることを含む）、</dd>
+<dt>(ii)</dt><dd>コーパスの辞書機能の利用、</dd>
+<dt>(iii)</dt><dd>二つの検索言語（Grep と TGrep2）によるコーパス検索、</dd>
+<dt>(iv)</dt><dd>二つの表示方式（ Tree と Word）によるアノテーションの閲覧。</dd>
+</dl>
+
+<p align="justify">検索インターフェースでは、本コーパスの製作中ファイルに直接アクセスできる。注意：全コーパスの安定したヴァージョンは定期的に（およそ6か月間おきに）用意されている。そのデータは<a href="https://github.com/ONCOJ/data/releases/tag/release" target="_blank">リリース・ダウンロード</a>のウエブサイトで得られる。</p>
+
+<br>
+<h2><a name="sec2">2</a>&nbsp;&nbsp;&nbsp; コーパスの概要ページとインターフェース・マップ</h2>
+
+<p align="justify">コーパス概要ページは検索インタフェースの入り口である。インターフェース内のどのページからも &lsquo;Corpus overview&rsquo; のボタンをクリックすると、概要ページに飛べる。インターフェース全体の構造とインターフェース内のナビゲーションは Figure 1 に示してある。Grep と TGrep2 の検索ページや Dictionary のページを通して検索結果のページに行き、検索のヒットを選ぶと、そのテキストが樹形図の形で表示される「ツリー・ページ」にたどりつく。 ツリー・ページ（<a href="#sec6.1">第 6.1 章</a>）では一つのテキスト全体の直接構成部関係がノードとノードの間の関係として示される。その中のどのノードでもクリックすると、その情報に基づく Grep 検索が行われる。ツリー・ページからワード・ページ （<a href="#sec6.2">第 6.2 章</a>）に飛ぶと、同じテキスト単語のレベルでの詳しい情報が表示され、それから辞書の見出しの閲覧や単語に対する Grep 検索ができる。ワード・ページとツリー・ページの間は往来が自由である。</p>
+
+<p><a name="fig1">Figure 1: インターフェース・マップ</a></p>
+
+<img src="search_map.png" alt="Map of the interface" height="240">
+
+<p align="justify">コーパス概要ページには Grep と TGrep2 の検索ページや辞書のページへのリンクがある。 それに加えて、テキスト ID 番号を記入するためのボックスもあり、以下の <a href="#sec3">第 3 章</a> でその機能を詳しく説明する。それから、コーパスに集積されている全てのテキストが出典によって列挙してあり、各々の項目が実際のテキストへのリンクになっている。</p>
+
+<br>
+<h2><a name="sec3">3</a>&nbsp;&nbsp;&nbsp;テキストの ID 番号による内容アクセス</h2>
+
+<p align="justify">コーパス概要ページ、ツリー・ページ、ワード・ページのどれにもテキストの ID 番号による検索を行うための ID ボックスがある。コーパス概要ページを開く段階では ID ボックスは空になっている。ツリー・ページやワード・ページの場合、表示されているテキストに対応する ID 番号が ID ボックスに入っている。 ID ボックスの内容は、自由に書き換えることができる。書き換えてから <tt>[ENTER]</tt>を押すと、新しい ID 番号に対応するテキスト表示のページ（ツリー・ページ或いはワード・ページ）に飛ぶ。もし書き換えた内容に対応するテキストが存在しなければ、空のテキスト表示ページに飛ぶ。あるテキストの表示ページへ飛ぶには、そのテキストの ID 番号と完全に一致する必要がある。ワード・ページの ID ボックスの内容を書き換えると、新しいテキストのワード・ページに飛ぶ。ツリー・ページ（又はコーパス概要ページ）の ID ボックスに新しい ID 番号を書き込むと、新しいテキストのツリー・ページに飛ぶ。</p>
+
+<br>
+<h2><a name="sec4">4</a>&nbsp;&nbsp;&nbsp;ソース・データの形式について</h2>
+
+<p align="justify">検索インタフェースの機能（特に検索のオプション）を活かすためには、ソース・データの形式の理解が必要である。本コーパスの全体は一つのファイルに収められ、各テキストの形態素解析データと直接構成部データがひとまとめの分析情報になっていて、テキストとテキストの間に空の一行が置かれている。一つのテキストの分析情報の第一行としては、そのテキストの形態素の連なり（&rsquo;word yield&lsquo;）が示してある。これは &lsquo;<tt>=N(" </tt>&rsquo; と &lsquo;<tt> ")</tt>&rsquo; の間に表示される。実際の分析情報は第二行から始まり、各単語に一行の分析データが順番に設けられ、単語自体がその行の最後に示してある。分析データというのは、各々の単語に対して直接構成部関係を示すツリー構造においての root （根）から leaf （葉）までのパースを示す。一つのテキストの分析情報の最後の行では、そのテキストの ID 番号のノードが示してある。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;データ形式の例として、コーパスの最初のテキストの分析情報を (<a href="#ex1">1</a>) で示す：</p>
+
+<dl>
+  <dt>(<a name="ex1">1</a>)</dt><dd></dd>
+</dl>
+<tt>=N("&nbsp;mi&nbsp;ato&nbsp;tukuru&nbsp;isi&nbsp;no&nbsp;pibiki&nbsp;pa&nbsp;ame&nbsp;ni&nbsp;itari&nbsp;tuti&nbsp;sape&nbsp;yusure&nbsp;titi&nbsp;papa&nbsp;ga&nbsp;tame&nbsp;ni&nbsp;moro&nbsp;pito&nbsp;no&nbsp;tame&nbsp;ni&nbsp;")</tt><br>
+<tt>"CP-FINAL","IP-SUB","0&#64;美阿止都久留","*"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;2","NP","PP","NP","IP-REL","NP-OB1","N","PFX-HON","L000035","PHON","mi"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;2","NP","PP","NP","IP-REL","NP-OB1","N","N","L050877","PHON","ato"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;2","NP","PP","NP","IP-REL","VB-ADC","L031144a","PHON","tukuru"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;2","NP","PP","NP","1&#64;伊志乃比鼻伎波","*"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;2","NP","PP","NP","N","L051130","PHON","isi"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;2","NP","PP","P-CASE-GEN","L000520","PHON","no"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;2","NP","N-DVB","L031497b","PHON","pibiki"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;2","P-TOP","L000522","PHON","pa"</tt><br>
+<tt>"CP-FINAL","IP-SUB","2&#64;阿米爾伊多利","*"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;4","NP","N","L050001a","PHON","ame"</tt><br>
+<tt>"CP-FINAL","IP-SUB","PP;&#64;4","P-CASE-DAT","L000519","PHON","ni"</tt><br>
+<tt>"CP-FINAL","IP-SUB","VB-INF","L030170a","PHON","itari"</tt><br>
+<tt>"CP-FINAL","3&#64;都知佐閇由須礼","*"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;3","PP-OB1","NP","N","L050015","PHON","tuti"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;3","PP-OB1","P-RES","L000525a","PHON","sape"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;3","VB-EXC","L031842a","PHON","yusure"</tt><br>
+<tt>"CP-FINAL","4&#64;知知波波賀多米爾","*"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;5","NP-PRD","PP","NP","N","L050402","N;&#64;1","L050641","PHON","titi"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;5","NP-PRD","PP","NP","N","L050402","N;&#64;2","L051720","PHON","papa"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;5","NP-PRD","PP","P-CASE-GEN","L000503","PHON","ga"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;5","NP-PRD","N","L050063","PHON","tame"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;5","COP-INF","L031965","PHON","ni"</tt><br>
+<tt>"CP-FINAL","5&#64;毛呂比止乃多米爾","*"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;7","NP-PRD","PP","NP","N","L050486","ADJ-STM","L007011","PHON","moro"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;7","NP-PRD","PP","NP","N","L050486","N","L050046","PHON","pito"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;7","NP-PRD","PP","P-CASE-GEN","L000520","PHON","no"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;7","NP-PRD","N","L050063","PHON","tame"</tt><br>
+<tt>"CP-FINAL","IP-ADV;&#64;7","COP-INF","L031965","PHON","ni"</tt><br>
+<tt>"ID","BS.1"</tt><br>
+<tt></tt><br>
+<tt>=N("&nbsp;mi&nbsp;swo&nbsp;ti&nbsp;amari&nbsp;puta&nbsp;tu&nbsp;no&nbsp;katati&nbsp;ya&nbsp;swo&nbsp;kusa&nbsp;to&nbsp;sodar&nbsp;eru&nbsp;pito&nbsp;no&nbsp;pumi&nbsp;si&nbsp;ato&nbsp;dokoro&nbsp;mare&nbsp;ni&nbsp;mo&nbsp;aru&nbsp;kamo&nbsp;")</tt><br>
+<tt>"IP-MAT","0&#64;弥蘇知阿麻利","*"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","NP","IP-REL","NP-PRD","N;&#64;1","NUM;&#64;1","L002003","PHON","mi"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","NP","IP-REL","NP-PRD","N;&#64;1","NUM;&#64;2","L002032","PHON","swo"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","NP","IP-REL","NP-PRD","N;&#64;1","CL","L002033","PHON","ti"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","NP","IP-REL","NP-PRD","N-DVB","L030097b","PHON","amari"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","NP","IP-REL","NP-PRD","1&#64;布多都乃加多知","*"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","NP","IP-REL","NP-PRD","N;&#64;4","NUM","L002002","PHON","puta"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","NP","IP-REL","NP-PRD","N;&#64;4","CL","L002015","PHON","tu"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","NP","IP-REL","COP-ADI","L031965","PHON","no"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","NP","N","L080239","PHON","katati"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","2&#64;夜蘇久佐等","*"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","N","NUM;&#64;1","L002008","PHON","ya"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","N","NUM;&#64;2","L002032","PHON","swo"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","NP","N","N","L052472","PHON","kusa"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","PP","P-CASE-COM","L000529","PHON","to"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","3&#64;曾太礼留比止乃","*"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","VB-ADN","VB-STM","L030969a","PHON","sodar"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","IP-REL","VB-ADN","VAX-STV-ADN","L000024","PHON","eru"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","NP","N","L050046","PHON","pito"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","PP-SBJ","P-CASE-GEN","L000520","PHON","no"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","4&#64;布美志阿止止己呂","*"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","VB-ADN","VB-STM","L031553a","PHON","pumi"</tt><br>
+<tt>"IP-MAT","NP-SBJ","IP-REL","VB-ADN","VAX-SPST-ADN","L000015","PHON","si"</tt><br>
+<tt>"IP-MAT","NP-SBJ","N","N;&#64;1","L050877","PHON","ato"</tt><br>
+<tt>"IP-MAT","NP-SBJ","N","N;&#64;2","L050060","PHON","dokoro"</tt><br>
+<tt>"IP-MAT","5&#64;麻礼爾母阿留可毛","*"</tt><br>
+<tt>"IP-MAT","ADJ-INF","ADJ-STM","L004072a","PHON","mare"</tt><br>
+<tt>"IP-MAT","ADJ-INF","COP-INF","L031965","PHON","ni"</tt><br>
+<tt>"IP-MAT","P-TOP","L000514","PHON","mo"</tt><br>
+<tt>"IP-MAT","VB-ADN","L030125a","PHON","aru"</tt><br>
+<tt>"IP-MAT","P-FNL-MPH","L000507","PHON","kamo"</tt><br>
+<tt>"ID","BS.2"</tt><br>
+
+<p align="justify">注意点の一つとして、(<a href="#ex1">1</a>) のノードの中には <tt>&#64</tt>で始まるマークがノード名に続くものがある。例えば、 <tt>BS.1</tt> の分析情報の中の <tt>"PP;&#64;2"</tt> と <tt>"PP;&#64;4"</tt> とがその例であるが、このノードは姉妹関係にある。言い換えれば、両方はそれまでのパース（すなわち、 <tt>"CP-FINAL","IP-SUB"</tt>）を共有している。異なっているノードでありながら、同じノード名と同じパースを持っているもの同士を区別するためには <tt>&#64</tt>で始まるマークを足す規則に従う： 姉妹ノードの中で同一のノード名がある場合、姉妹ノードの第 <tt>n</tt> 目のノードのノード名の後に &lsquo;<tt>;&#64;n</tt>&rsquo; を足す。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;TGrep2 による検索を可能にするために (<a href="#ex1">1</a>) の形式を括弧付きの樹形図（ツリー）の形式に書き換える。 ツリー形式では他のノードを全て支配する「根」のノードとして <tt>TOP</tt> というノードが設けられる。このデータ形式の一例として (<a href="#ex2">2</a>)がある。</p>
+
+<dl>
+  <dt>(<a name="ex2">2</a>)</dt><dd></dd>
+</dl>
+<tt>(TOP&nbsp;(CP-FINAL&nbsp;(IP-SUB&nbsp;(0&#64;美阿止都久留&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PP&nbsp;(NP&nbsp;(PP&nbsp;(NP&nbsp;(IP-REL&nbsp;(NP-OB1&nbsp;(N&nbsp;(PFX-HON&nbsp;(L000035&nbsp;(PHON&nbsp;mi)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L050877&nbsp;(PHON&nbsp;ato)))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(VB-ADC&nbsp;(L031144a&nbsp;(PHON&nbsp;tukuru))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1&#64;伊志乃比鼻伎波&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L051130&nbsp;(PHON&nbsp;isi))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-CASE-GEN&nbsp;(L000520&nbsp;(PHON&nbsp;no))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N-DVB&nbsp;(L031497b&nbsp;(PHON&nbsp;pibiki))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-TOP&nbsp;(L000522&nbsp;(PHON&nbsp;pa))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2&#64;阿米爾伊多利&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PP&nbsp;(NP&nbsp;(N&nbsp;(L050001a&nbsp;(PHON&nbsp;ame))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-CASE-DAT&nbsp;(L000519&nbsp;(PHON&nbsp;ni))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(VB-INF&nbsp;(L030170a&nbsp;(PHON&nbsp;itari))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3&#64;都知佐閇由須礼&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(IP-ADV&nbsp;(PP-OB1&nbsp;(NP&nbsp;(N&nbsp;(L050015&nbsp;(PHON&nbsp;tuti))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-RES&nbsp;(L000525a&nbsp;(PHON&nbsp;sape))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(VB-EXC&nbsp;(L031842a&nbsp;(PHON&nbsp;yusure))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4&#64;知知波波賀多米爾&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(IP-ADV&nbsp;(NP-PRD&nbsp;(PP&nbsp;(NP&nbsp;(N&nbsp;(L050402&nbsp;(N&nbsp;(L050641&nbsp;(PHON&nbsp;titi)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L051720&nbsp;(PHON&nbsp;papa))))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-CASE-GEN&nbsp;(L000503&nbsp;(PHON&nbsp;ga))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L050063&nbsp;(PHON&nbsp;tame))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(COP-INF&nbsp;(L031965&nbsp;(PHON&nbsp;ni))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5&#64;毛呂比止乃多米爾&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(IP-ADV&nbsp;(NP-PRD&nbsp;(PP&nbsp;(NP&nbsp;(N&nbsp;(L050486&nbsp;(ADJ-STM&nbsp;(L007011&nbsp;(PHON&nbsp;moro)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L050046&nbsp;(PHON&nbsp;pito))))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-CASE-GEN&nbsp;(L000520&nbsp;(PHON&nbsp;no))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L050063&nbsp;(PHON&nbsp;tame))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(COP-INF&nbsp;(L031965&nbsp;(PHON&nbsp;ni)))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ID&nbsp;BS.1))</tt><br>
+<tt></tt><br>
+<tt>(TOP&nbsp;(IP-MAT&nbsp;(0&#64;弥蘇知阿麻利&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(NP-SBJ&nbsp;(IP-REL&nbsp;(PP-SBJ&nbsp;(NP&nbsp;(IP-REL&nbsp;(PP&nbsp;(NP&nbsp;(NP&nbsp;(IP-REL&nbsp;(NP-PRD&nbsp;(N&nbsp;(NUM&nbsp;(L002003&nbsp;(PHON&nbsp;mi)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(NUM&nbsp;(L002032&nbsp;(PHON&nbsp;swo)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(CL&nbsp;(L002033&nbsp;(PHON&nbsp;ti))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N-DVB&nbsp;(L030097b&nbsp;(PHON&nbsp;amari)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1&#64;布多都乃加多知&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(NUM&nbsp;(L002002&nbsp;(PHON&nbsp;puta)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(CL&nbsp;(L002015&nbsp;(PHON&nbsp;tu)))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(COP-ADI&nbsp;(L031965&nbsp;(PHON&nbsp;no))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L080239&nbsp;(PHON&nbsp;katati))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2&#64;夜蘇久佐等&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(NUM&nbsp;(L002008&nbsp;(PHON&nbsp;ya)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(NUM&nbsp;(L002032&nbsp;(PHON&nbsp;swo)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L052472&nbsp;(PHON&nbsp;kusa)))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-CASE-COM&nbsp;(L000529&nbsp;(PHON&nbsp;to))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3&#64;曾太礼留比止乃&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(VB-ADN&nbsp;(VB-STM&nbsp;(L030969a&nbsp;(PHON&nbsp;sodar)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(VAX-STV-ADN&nbsp;(L000024&nbsp;(PHON&nbsp;eru)))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L050046&nbsp;(PHON&nbsp;pito))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-CASE-GEN&nbsp;(L000520&nbsp;(PHON&nbsp;no))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4&#64;布美志阿止止己呂&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(VB-ADN&nbsp;(VB-STM&nbsp;(L031553a&nbsp;(PHON&nbsp;pumi)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(VAX-SPST-ADN&nbsp;(L000015&nbsp;(PHON&nbsp;si)))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(N&nbsp;(L050877&nbsp;(PHON&nbsp;ato)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&nbsp;(L050060&nbsp;(PHON&nbsp;dokoro)))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5&#64;麻礼爾母阿留可毛&nbsp;*)</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ADJ-INF&nbsp;(ADJ-STM&nbsp;(L004072a&nbsp;(PHON&nbsp;mare)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(COP-INF&nbsp;(L031965&nbsp;(PHON&nbsp;ni))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-TOP&nbsp;(L000514&nbsp;(PHON&nbsp;mo)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(VB-ADN&nbsp;(L030125a&nbsp;(PHON&nbsp;aru)))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(P-FNL-MPH&nbsp;(L000507&nbsp;(PHON&nbsp;kamo))))</tt><br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ID&nbsp;BS.2))</tt><br>
+
+<p align="justify">ツリー形式の場合、格ノードのパースやノードとノードの間の関係が括弧構造によって指定され、ノード名は一回しか示されない。そのため、 &lsquo;<tt>;&#64;n</tt>&rsquo; マークを含む情報が不要となり、データ形式から省かれる。</p>
+
+<br>
+<h2><a name="sec5">5</a>&nbsp;&nbsp;&nbsp;検索ページ</h2>
+
+<p align="justify">本コーパスの検索インターフェースには二つのコーパス検索方法があり、それそれのページがある： Grep ページ (第 <a href="#sec5.1">5.1</a> 章) と TGrep2 page （第<a href="#sec5.2">5.2</a> 章)。</p>
+
+<h3><a name="sec5.1">5.1</a>&nbsp;&nbsp;&nbsp;Grep ページ</h3>
+
+<p align="justify">Grep ページには、Grep 検索表現を記入するためのボックスの他に、コーパス概要ページへ戻るためのリンクがある。検索表現をボックスに記入したうえで <tt>[ENTER]</tt> を押すと、検索が行われる。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;ボックスに記入する検索表現は、Grep コマンド (Magloire et al. 2021) である <tt>grep -n</tt> に続く <tt>&quot;&nbsp;&nbsp;&quot;</tt> という環境の中で処理される。検索の対象となっているのは一つのファイルで、コーパス全体のデータが <a href="#sec4">第 4 章</a>の (<a href="#ex1">1</a>) と同じ形式で納まっている。検索表現を工夫する以外、検索結果を絞る方法はない。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;語彙素の ID 番号 <tt>L031934a</tt> の単語を探すには、以下の (<a href="#ex3">3</a>) の検索表現をボックスに記入する。</p>
+
+<dl>
+  <dt>(<a name="ex3">3</a>)</dt><dd></dd>
+</dl>
+<tt>L031934a</tt><br>
+
+<p align="justify">語彙素の ID 番号 <tt>L031934a</tt> の動詞 (VB) で、いわゆる接続詞「て」が続くもの（本コーパスの分析では gerund (GER) 活用形のもの）を探すには、以下の (<a href="#ex4">4</a>) の検索表現をボックスに記入する。</p>
+
+<dl>
+  <dt>(<a name="ex4">4</a>)</dt><dd></dd>
+</dl>
+<tt>,.VB-GER.,.L031934a</tt><br>
+
+<p align="justify"><strong>注意：</strong>検索対象ファイルのデータ形式では、各ノード名が <tt>&quot;&nbsp;&nbsp;&quot;</tt> に囲まれ、Grep 検索表現の環境と記号が重複する。そのため、検索表には <tt>&quot;</tt> の記号が使えない。その代わりに、正規表現で一文字ワイルド・カードとして使われる &lsquo;<tt>.</tt>&rsquo; を使う。以上の (<a href="#ex4">4</a>) の検索表現はその一例である。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;語彙素の諸形式を検索するばかりでなく、Grep ページの機能の中に特に役立つものとして、テキストの第一行目の yield （形態素の連なり）の内容からの検索がある。スペース（文字と文字の間の空白）を含んだ検索表現は対象の範囲を自動的に yield に絞る。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;検索を行い、一致する項目（「ヒット」）がある場合、検索結果ページが開き、そのページのトップにヒットの数が表示される。その下に結果のデータが表となり、2列で表示される。一列目にはコーパスから一致した行が示される。ソースファイルの中の何行目にヒットがあるかは 2 列目に示される。この番号はツリーページへのリンクになっている。ツリーページの中では、ヒットの行の最後にある形態素がツリーの末端ノードとしてハイライトされている。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;一行目のセルは色で塗りつぶされる場合がある。色は最後の（形態素が綴ってある）ノード名のすぐ前のノード名による。そのノード名は形態素がどの表記法で書かれているかを示すが、表記法の種類（表音 = PHON、表意 = LOG、読み添え = NLOG など）とセルの色との対応は次の通り：</p>
+<ul>
+<li>訓読みに基づく表音表記 (<tt>PHON-KUN</tt>) の色： <font style="background-color: #FFFACD;">LemonChiffon</font>。</li>
+<li>万葉仮名による表音表記 (<tt>PHON</tt>) の色： <font style="background-color: #98FB98;">PaleGreen</font>。</li>
+<li>読み添えのもの (<tt>NLOG</tt>) の色： <font style="background-color: #FFDAB9;">PeachPuff</font>。</li>
+<li>地名の表意表記 (<tt>PLOG</tt>) の色： <font style="background-color: #D8BFD8;">Thistle</font>。</li>
+<li>表意表記 (<tt>LOG</tt>) の色： <font style="background-color: #D2B48C;">Tan</font>。</li>
+<li>Yield の行（すなわち &lsquo;<tt>=N(" </tt>&rsquo; で始まる行）は無色。</li>
+</ul>
+
+<p align="justify">検索はコーパス全体にかかるが、ヒットの出典によって表記法が変わる場合が多い。表記法によってデータの信憑性が決まる場合があるので、表記法を素早く見分けることに意味がある。その意味で表記法を表すセルの色が役に立つ。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;本コーパスにおけるテキストの順番は、テキスト ID 番号の英数字順になっている。検索のヒットは同じ順番によって検索結果ページの表に並べられる。一つの検索表現に一致するヒットの数が 2500 以下ならば、その全てが一度に表示される。それより多い場合は、2500 ヒットがコーパス順に、しかも連続に表示されるが、その制限の下で複数の連続が可能であり、表示される連続がその中から無作為に選出される。ヒットとヒットの間の文脈関係が意味を持つ場合があるため、ヒットが連続に表示されるように検索結果の表示が設定してある。ヒット数が 2500 を超えた場合、同じ検索表現で再び実行することによってまた違う連続が得られる。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;検索結果の数が 100 に達さない場合、すべての結果をツリーで表示するページへのリンクが検索結果表の下に現れる。</p>
+
+<h3><a name="sec5.2">5.2</a>&nbsp;&nbsp;&nbsp;TGrep2 ページ</h3>
+
+<p align="justify">TGrep2 ページには TGrep2 検索表現を記入するためのボックスがある。実行するためのコマンドである <tt>tgrep2</tt> (Rohde 2005) がコーパス全体のデータにかかるが、そのデータは <a href="#sec4">第 4 章</a> の (<a href="#ex2">2</a>) のような括弧つき形式をバイナリデータベースに変えた形を取っている。 検索表現を工夫する以外、検索結果を絞る方法はない。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;TGrep2 検索表現は、まずノード名と一致するパターンから始まる。文字列との完全一致、文字列Aか文字列Bかの和集合、拡張正規表現との一致など、検索するノード (<b>master node</b>) を指定するパターンが様々ある。いったん定義したマスター・ノードのパターンをさらに絞るには、他のノードとの構造上の関係を指定する必要がある。マスター・ノードとそれ以外のノードとの間に成立しうる関係として、まず直接的或いは間接的支配関係や前後関係、又はそれぞれの否定という関係がある。複数のノードとの関係によるマスター・ノードの特徴付けも可能である。ノードのパターンにラベルを振って、検索表現の中でラベルを参照することも可能である。TGrep2 という検索言語の詳しい説明は <u>Guide</u> のリンクからアクセスできる。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;TGrep2 の検索表現の一例として (<a href="#ex5">5</a>) がある。</p>
+
+<dl>
+  <dt>(<a name="ex5">5</a>)</dt><dd><tt>&sol;SBJ&sol;&nbsp;&lt;&nbsp;&sol;GEN&sol;&nbsp;&#x24;..&nbsp;(&sol;OB&sol;&nbsp;&lt;&nbsp;(&sol;&#94;P&#92;b&sol;&nbsp;&lt;&lt;&nbsp;(&sol;PHON&sol;&nbsp;&lt;&nbsp;wo)))</tt><br></dd>
+</dl>
+
+<form target="_blank" action="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj_tgrep2.sh" method="post">
+  <input type="hidden" name="search" value="/SBJ/ < /GEN/ $.. (/OB/ < (/^P\b/ << (/PHON/ < wo)))"/>
+  <button type="submit" name="submit_param" value="submit_value" class="btn-link">Try</button>
+</form>
+
+<p align="justify">検索表現 (<a href="#ex5">5</a>) は、主語の役割を指す文字列 <tt>SBJ</tt> を一部分として含んだ文字列（<tt>&sol;SBJ&sol;</tt>）をマスター・ノードとする。これは、例えば名詞句の <tt>NP-SBJ</tt> や後置詞句の <tt>PP-SBJ</tt> に一致するパターンである。 そういったノードの集合をさらに絞るように、所有格を指す文字列 <tt>GEN</tt> を含んだノード名を立てて、マスター・ノードがそれを直接支配する（<tt>&lt;</tt>）構造上の関係を指定する。それからマスター・ノードが目的語（つまり <tt>OB</tt> を含んだノード名）を姉妹として先行する（<tt>&#x24;..</tt>）関係をも指定する。括弧「<tt>( )</tt>」を利用することによって目的語のノードなどをさらに特徴づけることもできる。(<a href="#ex5">5</a>) の場合、目的語が助詞を直接支配し、その助詞が表音表記法を指す <tt>PHON</tt> のノードを支配し、その <tt>PHON</tt> というノードが <tt>wo</tt> と綴る形態素を直接支配する、というパターンが指定してある。換言すれば、「乎」、「袁」、「茂」や「少」などの万葉仮名で書かれた <i>wo</i> という格助詞のついた目的語を先行する所有格の主語を検索するためのパターンになっている。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;検索表現ボックスが空の場合、タッグ・セット（本コーパスで使われるノード名）の一覧の表が表示される。ボックスに検索表現を記入したうえで <tt>[ENTER]</tt> を押すと、検索が実行される。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;検索表現ボックスに加えて、TGrep2 ページにはコーパス概要ページへのリンクと検索結果の表示様式を選択するためのプルダウンメニューとがある。表示様式には二つの選択肢がある。</p>
+<ul>
+<li>デフォルトで出る &lsquo;basic&rsquo; という表示様式では、<b>全ての</b> ヒットのテキストが yield （形態素の連なり）の形で表示され、その中のマスター・ノードの文字列がハイライトされている（詳細は第 <a href="#sec5.2.1">5.2.1</a> 章を参照のこと)。 </li>
+<li>又は &lsquo;graphical&rsquo; を選択すると、<b>50 ヒットまで</b> の検索結果がツリーの形で、コーパス順番で表示される（詳細は第 <a href="#sec5.2.2">5.2.2</a> 章を参照のこと)。</li>
+</ul>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;検索を実行すると、ページのトップでヒット数とヒットを含むテキストの数が表示される。検索結果をダウンロードするためのボタンも表示される。ダウンロードのファイルにおいては検索結果はコーパス順で列挙してあり、再びダウンロードをしても（その間にコーパスの内容が変更されない限り）ファイルの内容は変わらない。</p>
+
+<h4><a name="sec5.2.1">5.2.1</a>&nbsp;&nbsp;&nbsp;ツリー検索の結果を yield として</h4>
+
+<p align="justify">検索結果の yield としての表示様式は、ヒットを含むテキスト全体を表すツリーの末端ノード（つまりローマ字で綴った形態素の連なり）として表示される形式である。 検索表現のマスター・ノードにあたる文字列がハイライトされている。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;各々の検索結果の yield に続き番号が振られる。その番号がそれぞれのツリー表示ページへのリンクになっている。</p>
+
+<h4><a name="sec5.2.2">5.2.2</a>&nbsp;&nbsp;&nbsp;樹形図としての検索結果の表示</h4>
+
+<p align="justify">検索結果がツリーの形として表示され、検索表現のマスタ・ノードに一致するところがハイライトされる。各々のツリーの ID 番号ノードがそれぞれのツリー・ページへのリンクになっている。検索結果はコーパス順で 50 ヒット分まで表示される。ヒット数が 50 を超えた場合、同じ検索を再び実行することによって前回と違った結果が得られる。</p>
+
+<h4><a name="sec5.2.3">5.2.3</a>&nbsp;&nbsp;&nbsp;検索結果全体のダウンロード</h4>
+
+<p align="justify">&lsquo;Download all results&rsquo; のボタンを押して、得られたファイルを見ると、ヒットの数だけのツリーが含まれていることが分かる。同一のツリーに複数のヒットがある場合、そのツリーはその数だけ結果として出るということになる。ダウンロード・ファイルが含んでいるのは結果のみであり、どの検索表現で得られたか、マスター・ノードにあたるところがどこにあるかなどの情報はファイルの内容に含まれていない。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;これと対照的に、オンラインの表示では、yield でも樹形図でも、マスター・ノードに一致する部分がハイライトされ、同一のツリーに複数のヒットがある場合、一つのツリーに複数のノードがハイライトされる。このハイライトは検索表現から生成したものではなく、二次的な過程による上乗せである。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;<b>注意：</b>検索表現の中でマスター・ノードを指定する際、一つのノードに複数の一致の仕方を指定することが可能である。その場合、ヒット数がハイライトされているノードの数を上回ってしまう。同じデータを重複して数えるような検索表現は、統計的な研究に向いていないことをご了承ください。</p>
+
+<br>
+<h2><a name="sec6">6</a>&nbsp;&nbsp;&nbsp;データ分析を可視化するページ</h2>
+
+<p align="justify">本コーパスの形態素解析や統語分析の結果を目で確かめるため、検索インターフェースでは二つの異なっている様式を用意している：ツリー・ページ （第 <a href="#sec6.1">6.1</a> 章）とワード・ページ（第 <a href="#sec6.2">6.2</a> 章）。 どちらのページにも、表示されている分析に対応するテキスト ID 番号を確かめられるボックスがあり、第 <a href="#sec3">3</a> 章でも説明しているように、そのボックスの内容を書き換えれば新たなテキストの分析に飛べる。</p>
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;ID ボックスに加えて、各々のページのトップには次のものがある：</p>
+<ul>
+<li>当分析のツリー・ページへの &lsquo;Tree&rsquo; のリンク（現在のページがツリー・ページの場合、このボタンはリンクでなく、普通の太文字となっている）、</li>
+<li>当分析のワード・ページへの &lsquo;Word&rsquo; のリンク（現在のページがワード・ページの場合、このボタンはリンクでなく、普通の太文字となっている）、</li></li>
+<li>コーパス概要ページへの &lsquo;Corpus overview&rsquo; のリンク。</li>
+</ul>
+
+<h3><a name="sec6.1">6.1</a>&nbsp;&nbsp;&nbsp;ツリー・ページ</h3>
+
+<p align="justify">ツリー・ページは、一つのテキストの形態素解析と統語分析の結果を可視化する。ID ボックスの中に複数のテキスト ID 番号が入ると、それぞれのテキストに対するツリーが表示される。その場合、各々のツリーに ID 番号の見出しが付き、その見出しが個別のツリー・ページへのリンクになっている。単一のツリーの場合、ツリーに伴ってテキスト全体が表の形式でも表示され、その表には三つの列がある。第一列にはテキストの行番号が表示される。第二列にはテキストの元である漢字が表示される。第三列にはローマ字によるテキストの音韻表示がある。Figure 2 では、(<a href="#ex1">1</a>) と (<a href="#ex2">2</a>)両方に示してある二つのテキストの前者のテキストの分析をツリー形式で示す。</p>
+
+<p><a name="fig2">Figure 2: ツリー・ページの実例</a></p>
+
+<img src="tree_page.png" alt="Example tree page" height="810">
+
+<h3><a name="sec6.2">6.2</a>&nbsp;&nbsp;&nbsp;ワード・ページ</h3>
+
+<p align="justify">ワード・ページは、テキストの形態素ごとに、古代日本語と現代英語の辞書の記事の対応を示す。ID ボックスの中に複数のテキスト ID 番号が入ると、それぞれのテキストに対する辞書記事の対応が表示される。Figure 3 では、(<a href="#ex1">1</a>) と (<a href="#ex2">2</a>)両方に示してある二つのテキストの前者のテキストの分析をワード形式で示す。</p>
+
+<p><a name="fig3">Figure 3: ワード・ページの実例</a></p>
+
+<img src="word_page.png" alt="Example word page" height="640">
+
+<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;Figure 3 が示すように、ワード形式の分析は 4 列の表で表示される。第 1 列はテキストで現れる単語と同じ形で表示し、第 2 列はその単語の品詞を表示する。第 3 列はその単語に対応する語彙素 ID 番号を表示し、その番号をクリックすると、番号に基づいた Grep 検索がコーパス全体にかけられる。それに加えて、第 3 列にはその単語の辞書記事への dictionary というリンクがある。第 4 列では単語についての、 ONCOJ 辞書に載っている情報を示す。</p>
+
+<br>
+<br>
+<br>
+<h2><a name="references">参考文献</a></h2>
+
+<p><a name="Magloire-et-al-2021">Magloire, Alain et al. 2021.</a> GNU Grep: Print lines that match patterns, version 3.7. Free Software Foundation.</p>
+
+<p><a name="Rohde-2005">Rohde, Douglas. 2005.</a> TGrep2 User Manual version 1.15. Available at: <tt><a href="https://github.com/andreasvc/tgrep2">https://github.com/andreasvc/tgrep2</a></tt>.</p>
+
+<br/>
+<br/>
+
+</body>
+</html>
+

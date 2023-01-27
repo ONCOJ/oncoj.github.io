@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Oxford NINJAL Corpus of Old Japanese (ONCOJ)</title>
+  <link rel="stylesheet" href="newoncoj_style.css">
+</head>
+<body>
+
+<div id="headline1">
+<p>&nbsp;</p>
+<h1>Oxford NINJAL Corpus of Old Japanese (ONCOJ)</h1>
+</div>
+
+<ul class="navbar">
+<li><a href="index.html">Front page</a><br><a href="front_page_Japanese.html">フロント・ページ</a>
+<li><a href="editorial_board_English.html">Editorial board</a><br><a href="editorial_board_Japanese.html">編集委員会</a>
+<li><a href="about_the_project_English.html">About the project</a><br><a href="about_the_project_Japanese.html">プロジェクトについて</a>
+<li><a href="texts_English.html">The texts</a><br><a href="texts_Japanese.html">OJ テキスト</a>
+<li><a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj_dictionary.sh?search=.&part=s&mode=typeset" target="_blank">Dictionary<br>辞書</a>
+<li><a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj.sh" target="_blank">Search interface<br>検索インターフェース</a>
+<li><a href="search_interface_English.html">About the search interface</a><br><a href="search_interface_Japanese.html">検索インターフェースについて</a>
+<li><a href="https://github.com/ONCOJ/data/releases/tag/release" target="_blank">Download</a><br><a href="https://github.com/ONCOJ/data/releases/tag/release" target="_blank">ダウンロード</a>
+<li><a href="prospects_English.html">Prospects and plans</a><br><a href="prospects_Japanese.html">今後の研究計画及び抱負</a>
+<li class="active"><a href="updates_English.html">Updates</a><br>アップデート
+<li><a href="acknowledgements_English.html">Acknowledgements of support</a><br><a href="acknowledgements_Japanese.html">研究支援について</a>
+<li><a href="contact_English.html">Report errors, contact</a><br><a href="contact_Japanese.html">エラーの報告連絡先及びその他の連絡先</a> 
+<li><a href="https://oncoj.orinst.ox.ac.uk/">Parsed Corpora Portal<br>コーパス・ポータルサイト</a>
+</ul>
+
+<h1>アップデート</h1>
+2020年3月の時点では、検索インターフェースからアクセスするオンラインデータを現在開発中のデータから直接取る形で公開している。
+分析の改良、新しい機能など、新展開がある都度、その情報はこのページで発表する。</p>
+
+Version 2018.3のバージョンに代わり、最初のアップデートは2018年9月21日に行われた。見出し語番号付けの普及、原文の電子版の訂正、形態論・統語論分析の改良に加え、その段階で行った体系的な変更は以下の通り。
+<ul>
+<li>見出し語番号はすべて 「l0xxxxx」という形式に整合化した。</li>
+
+<li>節の名詞化を表す句タッグ「IP-NMZ」を定めた。名詞句の一種として文法役割を指定されることもある（例：「SBJ」（= subject）、「OB1」（= object）、「PRD」（= nominal predicate）など）。名詞化された節の述語が連体形（「ADN」や「ADC」）あるいはク語法（「NML]）の形を取ることが多い。</li>
+
+<li>代名詞などの代用表現に品詞タグを設けた（例：「PRO-N」（= pronoun）、「PRO-ADV」（= pro-adverb）など）。不定代用表現にも品詞を表す拡張をつけた（例：「WH-N」（= interrogative pronoun）、「WH-ADJ-STM」（= interrogative adjective）、「WH-ADV」（= interrogative adverb）、「WH-NUM」（= interrogative numeral）など）。</li>
+
+<li>枕詞、人名、地名などの情報は、見出し語番号から品詞タッグに移された（例：「MK」（= makura-kotoba）、「PLN」（= place name）、「PEN」（= personal name）など）。</li>
+
+<li>枕詞自体の内在構造を整合化した。全体を語とし、可能な限りその構成素に形態論的情報（品詞や見出し語番号）を付与するが、平らな構造にする。句のレベルでは、枕詞は IP-EPT（= epithetical IP）を投射する。このように修飾できる構成素にはなるが、具体的な文法役割は未指定のままである。</li>
+
+<li>屈折する複合語（述語の連辞）の活用形情報を、語の最高レベル（投射する句の直下）のタッグにコピーすることにした（例： <em>siranu</em> [VB-ADN [VB-STM sira] [VAX-NEG-ADN nu] ]）。このように、述語の活用形を同定するために内在構造まで検索しなくても良くなり、節とそれを投射する述語の活用形情報が簡単に求められるようになる。</li>
+
+<li>全ての形状言に対して、最低レベル（文字列の直上）でのタッグ付けを「ADJ-STM」（= adjective stem）と改めた。 こういった形態素は単独で語（ADJ）を成す場合もあるが、名詞と複合し名詞をなす場合（例： <em>opokimi</em> [N [ADJ-STM opo] [N kimi] ]）あるいは ACP（= adjectival copula）または COP（= copula）に続いて ADJ（= inflected adjective form）をなす場合（例： <em>takaki</em> [ADJ-ADN [ADJ-STM taka] [ACP-ADN ki] ]）が多い。以上の「高き」の場合、 形容詞の語幹 ADJ-STM に付く活用語尾は連体形（ADN）になっており、したがって語全体にも ADN という拡張が付けられる。</li>
+
+<li>数字が現れる構造を、次のように簡略した：数字 NUM が名詞 N か数助詞 CL のいずれかと組み合わされ、その全体が必ず名詞 N を成す（例： <em>pitoywo</em> [N [NUM pito] [N ywo] ]）。したがって、「NUMCLP」 （= numeral classifier phrase）というタッグを廃止した。</li>
+
+<li>「WORD」という品詞拡張の使用は、品詞が不明な場合のみになった。</li>
+
+<li>意味役割を表す拡張に関しては、体系的な取り扱いのできないものを削除した。</li>
+</ul>
+
+
+<p><strong>2021年3月7日</strong>に4番目のアップデートが行われ、語彙素ID番号の目視チェック及び修正の他に、分析の合理化、情報の増加がデータに反映された。
+その時点で <strong>単語リスト</strong>も更新した。</p>
+
+<p><strong>2021年10月14日</strong>に検索インタフェースのドメーヌの変更に伴い、その機能が大幅に増えた。
+この時点を堺に本コーパスのおオンラインのデータがリアルタイムで更新されるようになった。</p>
+
+<p><strong>2023年1月</strong>、検索インターフェースにおける <a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj_dictionary.sh?search=.&part=s&mode=typeset" target="_blank">辞書</a>の機能の公開に伴い、現在のサイトの <strong>単語リスト</strong> のページを廃止した。</p>
+
+
+</body>
+</html>
+

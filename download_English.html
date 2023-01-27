@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Oxford NINJAL Corpus of Old Japanese (ONCOJ)</title>
+ <link rel="stylesheet" href="newoncoj_style.css">
+</head>
+<body>
+
+<div id="headline1">
+<p>&nbsp;</p>
+<h1>Oxford NINJAL Corpus of Old Japanese (ONCOJ)</h1>
+</div>
+
+<ul class="navbar">
+<li><a href="index.html">Front page</a><br><a href="front_page_Japanese.html">フロント・ページ</a>
+<li><a href="editorial_board_English.html">Editorial board</a><br><a href="editorial_board_Japanese.html">編集委員会</a>
+<li><a href="about_the_project_English.html">About the project</a><br><a href="about_the_project_Japanese.html">プロジェクトについて</a>
+<li><a href="texts_English.html">The texts</a><br><a href="texts_Japanese.html">OJ テキスト</a>
+<li><a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj_dictionary.sh?search=.&part=s&mode=typeset" target="_blank">Dictionary<br>辞書</a>
+<li><a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/oncoj.sh" target="_blank">Search interface<br>検索インターフェース</a>
+<li><a href="search_interface_English.html">About the search interface</a><br><a href="search_interface_Japanese.html">検索インターフェースについて</a>
+<li><a href="https://github.com/ONCOJ/data/releases/tag/release" target="_blank">Download</a><br><a href="https://github.com/ONCOJ/data/releases/tag/release" target="_blank">ダウンロード</a>
+<li><a href="prospects_English.html">Prospects and plans</a><br><a href="prospects_Japanese.html">今後の研究計画及び抱負</a>
+<li><a href="updates_English.html">Updates</a><br><a href="updates_Japanese.html">アップデート</a>
+<li><a href="acknowledgements_English.html">Acknowledgements of support</a><br><a href="acknowledgements_Japanese.html">研究支援について</a>
+<li><a href="https://github.com/ONCOJ/data/issues" target="_blank">Contact<br>連絡先</a>
+<li><a href="https://oncoj.orinst.ox.ac.uk/">Parsed Corpora Portal<br>コーパス・ポータルサイト</a>
+</ul>
+
+<h1>Download</h1>
+<p>This page describes how to download of source files for the ONCOJ corpus.
+The data is in a Penn Historical-style bracketed trees format (see link below), which allows use of tools such as TGrep, TGrep2, Tregex, CorpusSearch2 and TSurgeon.
+The files are text files (with the extension <strong>.txt</strong>), and can be opened by any text editor.
+There are 4991 individual texts in the corpus.
+Each can be downloaded individually in its own <strong>.txt</strong> file.
+But the corpus has been compiled into 26 <strong>.txt</strong> files according to the sources of the texts, and it is possible to download these as well.</p>
+
+
+<p>Until March 2022, all the data for periodic releases were available here through a link to a compressed folder containing 26 text files.
+As of March 2022, the data accessible through the search interface is directly derived from the source data as it is updated in real time.
+This data can be downloaded file by file directly through the search interface.</p>
+
+<!-- BETTER TO DOWNLOAD FROM GITHUB
+<h2>File by file download</h2>
+<p>The corpus has been divided into 26 files according to the textual source:
+poems from the <em>Bussokuseki-ka</em> are in one <strong>BS</strong> file;
+poems from the <em>Fudoki kayō</em> are in one <strong>FK</strong> file, etc.
+These 26 files can be downloaded one by one in the following way: </p>
+
+<p>The overview page of the <a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/overview.sh?db=oncoj&mode=download">Tree search interface</a> presents the data for the entire corpus separated into 26 text files (with filenames <strong>BS</strong>, <strong>FK</strong>, <strong>JSHT</strong>, etc.).
+By selecting <strong>Download</strong> from the top of the page, each file can be downloaded by clicking the numbers (1 ~ 26) that immediately precede each filename.</p>
+-->
+
+<!-- THIS IS NOT A GOOD METHOD TO USE
+<h2>By search result</h2>
+<p>The 4991 texts can be downloaded in one <strong>.txt</strong> file in the following way: </p>
+
+<p>In the <strong>Files</strong> selection box within the <a href="https://oncoj.orinst.ox.ac.uk/cgi-bin/overview.sh?db=oncoj">Tree search interface</a>, set the range of files to be searched to include all files by entering <strong><tt>1,26</tt></strong> in the box.
+In the <strong>Tregex search expression</strong> box immediately below, search for the identification nodes that appear once in every text by entering <strong><tt>/^ID$/</tt></strong> there, then submit the search expression by clicking <strong>search</strong>.
+This will yield 4991 hits, one for each of the 4991 separate texts in the corpus.
+In the search results page click the <strong>Download all results</strong> button to download all these texts in one <strong>.txt</strong> file.
+</p>
+-->
+
+<!-- <p>Later updates will include a folder with one file per text in Alpino format, and a folder with one file per text in TEI convertible format (that is, a format that can be converted to a TEI compatible file with some simple processing).</p> <p>The current download reflects the state of the corpus on September 20, 2018. </p> <p>Download source files</p> <ol> <li>Bracketed trees (text): <a href="oncoj_Sept_2018.zip">oncoj.zip</a></li> <li>Alpino format (xml)</li> <li>TEI convertible format (xml)</li></ol> -->
+
+</body>
+</html>
+
